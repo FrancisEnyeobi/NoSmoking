@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: "poppins", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    transform-style: preserve-3d;
+}
+.container .cigrate{
+    transform-style: preserve-3d;
+    animation: animate;
+    -webkit-animation: animate 15s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform:perspective(1000px) rotateX(0deg) rotateY(0deg) ;
+        -webkit-transform:perspective(1000px) rotateX(0deg) rotateY(0deg) ;
+        -moz-transform:perspective(1000px) rotateX(0deg) rotateY(0deg) ;
+        -ms-transform:perspective(1000px) rotateX(0deg) rotateY(0deg) ;
+        -o-transform:perspective(1000px) rotateX(0deg) rotateY(0deg) ;
+}
+    100%{
+        transform:perspective(1000px) rotateX(360deg) rotateY(360deg) ;
+}
+}
+.container .cigrate span{
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-shadow: 0 2px 5px #00000040;
+    position: absolute;
+    transform: translate(-50%,-50%) rotateX(calc(var(--i)*36deg)) translateZ(25px);
+    transform-style: preserve-3d;
+    -webkit-transform: translate(-50%,-50%) rotateX(calc(var(--i)*36deg)) translateZ(25px);
+    -moz-transform: translate(-50%,-50%) rotateX(calc(var(--i)*36deg)) translateZ(25px);
+    -ms-transform: translate(-50%,-50%) rotateX(calc(var(--i)*36deg)) translateZ(25px);
+    -o-transform: translate(-50%,-50%) rotateX(calc(var(--i)*36deg)) translateZ(25px);
+}
+.container .cigrate span i
+{
+    font-style: normal;
+    color: #da7f09;   
+}
+.container .cigrate span i:first-child::after
+{
+    content: "l";
+    text-transform: lowercase;
+    color: #ccc;
+}
+.container .cigrate span i:last-child
+{    
+    filter: blur(2px); 
+    text-transform: lowercase;
+    color: #f00; 
+    -webkit-filter: blur(2px);
+    text-shadow:-4px 0px 2px #000,
+    8px 0 20px red,
+    8px 0 25px #f00,
+    16px 0 0 #444,
+    20px 0 0 #666,
+    25px 0 0 #888,
+    28px 0 0 #999;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cigrate">
+            <span style="--i:1"><i>noooo</i>smooooooooking<i>|</i></span>
+            <span style="--i:2"><i>noooo</i>smooooooooking<i>|</i></span>
+            <span style="--i:3"><i>noooo</i>smooooooooking<i>|</i></span>
+            <span style="--i:4"><i>noooo</i>smooooooooking<i>|</i></span>
+            <span style="--i:5"><i>noooo</i>smooooooooking<i>|</i></span>
+            <span style="--i:6"><i>noooo</i>smooooooooking<i>|</i></span>
+            <span style="--i:7"><i>noooo</i>smooooooooking<i>|</i></span>
+            <span style="--i:8"><i>noooo</i>smooooooooking<i>|</i></span>
+            <span style="--i:9"><i>noooo</i>smooooooooking<i>|</i></span>
+            <span style="--i:10"><i>noooo</i>smooooooooking<i>|</i></span>
+        </div>
+    </div>
+</body>
+</html>
